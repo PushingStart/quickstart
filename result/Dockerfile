@@ -1,4 +1,4 @@
-FROM node:10-slim
+FROM node:10-slim@sha256:88932859e3d022d79161b99628c4c2c50e836437455e2d1b1a008d98367b10d6
 
 # add curl for healthcheck
 # add wait-for-it to delay start

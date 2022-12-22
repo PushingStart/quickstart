@@ -1,5 +1,5 @@
 # Using official python runtime base image
-FROM python:3.9-slim
+FROM python:3.9-slim@sha256:9e0b4391fc41bc35c16caef4740736b6b349f6626fd14eba32793ae3c7b01908
 
 # add curl for healthcheck
 # add wait-for-it to delay start

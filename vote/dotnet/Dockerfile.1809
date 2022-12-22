@@ -8,7 +8,7 @@ COPY /Vote .
 RUN dotnet publish -c Release -o /out Vote.csproj
 
 # app image
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1@sha256:e3b773f30a0a6e88d71ce52429f6847627fc9353e491346902ca345760b82bdd
 
 WORKDIR /app
 ENTRYPOINT ["dotnet", "Vote.dll"]

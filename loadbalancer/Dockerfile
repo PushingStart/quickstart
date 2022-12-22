@@ -1,4 +1,4 @@
-FROM nginx:1
+FROM nginx:1@sha256:0047b729188a15da49380d9506d65959cce6d40291ccfb4e039f5dc7efd33286
 
 # add curl for troubleshooting
 # add wait-for-it to delay start

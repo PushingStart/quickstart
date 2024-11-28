@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 as builder
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1@sha256:150d074697d1cda38a0c2185fe43895d84b5745841e9d15c5adba29604a6e4cb as builder
 
 WORKDIR /Vote
 COPY Vote/Vote.csproj .
@@ -8,7 +8,7 @@ COPY /Vote .
 RUN dotnet publish -c Release -o /out Vote.csproj
 
 # app image
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1@sha256:e3b773f30a0a6e88d71ce52429f6847627fc9353e491346902ca345760b82bdd
 
 WORKDIR /app
 ENTRYPOINT ["dotnet", "Vote.dll"]
